@@ -1,5 +1,5 @@
 <template>
-  <div class="relative -bottom-45 z-5 -mt-15">
+  <div class="relative -bottom-50 z-5 -mt-15">
     <img src="../../../assets/images/illustration-phones.svg" alt="phones illustration" />
   </div>
   <div

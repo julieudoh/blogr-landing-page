@@ -4,10 +4,11 @@
       <img :src="headerLogo" alt="Company Logo" class="h-full object-contain" />
     </div>
 
-    <a @click="toggleDropDown">
+    <a @click="toggleNav" class="cursor-pointer sm:hidden">
       <img :src="isOpen ? CloseMenu : OpenMenu" alt="hamburger icon" />
     </a>
-    <app-nav v-if="isOpen"></app-nav>
+    <app-nav v-if="isOpen" @close-nav="closeNav" class="sm:hidden"></app-nav>
+    <app-nav class="hidden sm:block"></app-nav>
   </div>
 </template>
 
@@ -30,10 +31,11 @@ export default {
     }
   },
   methods: {
-    toggleDropDown() {
+    toggleNav() {
       this.isOpen = !this.isOpen
-
-      console.log(this.isOpen)
+    },
+    closeNav() {
+      this.isOpen = false
     },
   },
 }

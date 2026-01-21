@@ -1,11 +1,11 @@
 <template>
   <div
-    class="absolute w-full top-20 shadow-sm bg-[hsl(0,100%,100%)] shadow-gray-100 rounded-m z-23 rounded-md p-4"
+    class="absolute w-full top-20 shadow-sm bg-[hsl(0,100%,100%)] shadow-gray-100 rounded-m z-23 rounded-md p-4 sm:bg-transparent sm:w-[70%] sm:shadow-none sm:right-0"
   >
     <ul class="mb-2">
-      <DropDown title="Product" :listItems="product" />
-      <DropDown title="Company" :listItems="company" />
-      <DropDown title="Connect" :listItems="connect" />
+      <DropDown title="Product" :listItems="product" @emit-data="closeNav" />
+      <DropDown title="Company" :listItems="company" @emit-data="closeNav" />
+      <DropDown title="Connect" :listItems="connect" @emit-data="closeNav" />
     </ul>
     <div class="flex flex-col justify-between items-center pt-4 border-t border-gray-300">
       <base-button class="border-0 text-[hsl(208,49%,24%)] mb-2 px-10">Login</base-button>
@@ -28,29 +28,29 @@ export default {
       product: [
         {
           name: 'Overview',
-          href: '#',
+          href: '/home',
         },
         {
           name: 'Pricing',
-          href: '#',
+          href: '/pricing',
         },
         {
           name: 'Marketplace',
-          href: '#',
+          href: '/marketplace',
         },
         {
           name: 'Features',
-          href: '#',
+          href: '/features',
         },
         {
           name: 'Integrations',
-          href: '#',
+          href: '/integrations',
         },
       ],
       company: [
         {
           name: 'About',
-          href: '#',
+          href: '/about',
         },
         {
           name: 'Team',
@@ -80,6 +80,11 @@ export default {
         },
       ],
     }
+  },
+  methods: {
+    closeNav(data) {
+      this.$emit('close-nav', data)
+    },
   },
 }
 </script>
