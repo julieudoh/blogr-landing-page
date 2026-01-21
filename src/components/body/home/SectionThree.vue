@@ -2,7 +2,7 @@
   <div class="w-[90%] mx-auto mt-5 mb-3">
     <div class="w-full h-60">
       <img
-        src="../../assets/images/illustration-laptop-mobile.svg"
+        src="../../../assets/images/illustration-laptop-mobile.svg"
         alt="illustration laptop"
         class="object-cover h-full"
       />

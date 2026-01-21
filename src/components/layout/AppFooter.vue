@@ -1,7 +1,7 @@
 <template>
   <div class="bg-[hsl(240,10%,16%)] rounded-tr-[90px] font-[Ubuntu] py-17">
     <div
-      class="w-[40%] mx-auto text-center text-[hsl(0,100%,100%)] text-[16px] flex flex-col justify-center items-center bg-red-500"
+      class="w-[40%] mx-auto text-center text-[hsl(0,100%,100%)] text-[16px] flex flex-col justify-center items-center"
     >
       <div class="h-25 w-25">
         <img src="../../assets/images/logo.svg" alt="company logo" class="object-contain h-full" />

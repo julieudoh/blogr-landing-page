@@ -7,9 +7,9 @@
 </template>
 
 <script>
-import SectionOne from '../body/SectionOne.vue'
-import SectionTwo from '../body/SectionTwo.vue'
-import SectionThree from '../body/SectionThree.vue'
+import SectionOne from '../body/home/SectionOne.vue'
+import SectionTwo from '../body/home/SectionTwo.vue'
+import SectionThree from '../body/home/SectionThree.vue'
 
 export default {
   components: {

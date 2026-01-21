@@ -1,19 +1,19 @@
 <template>
   <banner-container></banner-container>
-  <app-body></app-body>
+  <home-page></home-page>
   <app-footer></app-footer>
 </template>
 
 <script>
 import BannerContainer from './components/intro/BannerContainer.vue'
-import AppBody from './components/layout/AppBody.vue'
 import AppFooter from './components/layout/AppFooter.vue'
+import HomePage from './components/pages/HomePage.vue'
 
 export default {
   components: {
     BannerContainer,
-    AppBody,
     AppFooter,
+    HomePage,
   },
 }
 </script>
