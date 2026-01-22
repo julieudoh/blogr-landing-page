@@ -8,8 +8,8 @@
     </p>
 
     <div class="flex justify-between mt-10 sm:w-[50%] sm:mx-auto">
-      <base-button class="active">Start for Free</base-button>
-      <base-button>Learn More</base-button>
+      <base-button class="active border-[hsl(0,100%,100%)]">Start for Free</base-button>
+      <base-button class="border-[hsl(0,100%,100%)]">Learn More</base-button>
     </div>
   </div>
 </template>

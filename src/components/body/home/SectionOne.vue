@@ -1,12 +1,12 @@
 <template>
-  <section class="text-center text-[16px] w-[90%] sm:w-[85%] lg:[80%] mx-auto sm:h-180 sm:my-10">
+  <section class="text-center text-[16px] w-[90%] mx-auto sm:h-screen sm:my-10">
     <h2
-      class="text-[26px] sm:text-[30px] lg:text-[35px] text-[hsl(208,49%,24%)] mt-18 mb-5 sm:mr-40 font-semibold"
+      class="text-[26px] sm:text-[30px] lg:text-[35px] text-[hsl(208,49%,24%)] mt-18 mb-5 sm:mr-60 font-semibold"
     >
       Designed for the future
     </h2>
     <div class="sm:flex sm:flex-row-reverse sm:h-full sm:relative sm:w-full">
-      <div class="w-full sm:w-[80%] sm:absolute sm:-top-20 sm:-right-15 lg:-right-18 z-2">
+      <div class="w-full sm:w-[60%] sm:absolute sm:-top-20 sm:-right-15 lg:-right-18 z-2">
         <img
           src="../../../assets/images/illustration-editor-mobile.svg"
           alt="illustration editor"
@@ -18,7 +18,7 @@
           class="object-contain h-full hidden sm:block"
         />
       </div>
-      <div class="sm:w-[50%] sm:h-full sm:flex sm:flex-col items-center justify-center sm:absolute sm:left-0 ">
+      <div class="sm:w-[50%] sm:h-full sm:flex sm:flex-col items-center justify-center sm:absolute sm:-left-6 sm:-top-20 ">
         <div class="mt-8 sm:text-left sm:mt-0">
           <h3 class="text-[26px] sm:text-[18px] text-[hsl(208,49%,24%)] mb-4 font-semibold">
             Introducing an extensible editor
