@@ -1,10 +1,28 @@
 <template>
-  <div class="w-full py-3 text-center">
-    <a @click="toggleDropDown" class="flex w-full items-center justify-center">
+  <div class="w-full py-3 sm:py-0 sm:mr-5 text-center sm:relative sm:inline-block">
+    <a
+      @click="toggleDropDown"
+      class="flex w-full items-center justify-center text-[hsl(208,49%,24%)] sm:text-[hsl(0,100%,100%)] cursor-pointer"
+    >
       {{ title }}
-      <img :src="darkArrow" alt="dropdown icon" class="ml-2" :class="{ 'rotate-180': isOpen }" />
+      <img
+        :src="darkArrow"
+        alt="dropdown icon"
+        class="ml-2 md:hidden"
+        :class="{ 'rotate-180': isOpen }"
+      />
+      <img
+        :src="lightArrow"
+        alt="dropdown icon"
+        class="hidden sm:block ml-2"
+        :class="{ 'rotate-180': isOpen }"
+      />
     </a>
-    <div class="w-full rounded-sm bg-gray-200 p-4" v-if="isOpen" @click="closeDropDown">
+    <div
+      class="w-full rounded-sm bg-gray-200 sm:bg-[hsl(0,100%,100%)] p-4 sm:absolute sm:left-0 sm:w-[150px] cursor-pointer sm:text-[14px] lg:text-[16px]"
+      v-if="isOpen"
+      @click="closeDropDown"
+    >
       <router-link
         v-for="item in listItems"
         :key="item.name"
@@ -32,7 +50,6 @@ export default {
   methods: {
     toggleDropDown() {
       this.isOpen = !this.isOpen
-      console.log(this.isOpen)
     },
     closeDropDown() {
       this.isOpen = false
