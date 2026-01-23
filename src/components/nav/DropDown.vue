@@ -19,10 +19,11 @@
       />
     </a>
     <div
-      class="w-full rounded-sm bg-gray-200 sm:bg-[hsl(0,100%,100%)] p-4 sm:absolute sm:left-0 sm:w-[150px] cursor-pointer sm:text-[14px] lg:text-[16px]"
+      class="w-full rounded-sm bg-gray-200 sm:bg-[hsl(0,100%,100%)] p-4 sm:absolute sm:left-0  cursor-pointer sm:text-[14px] lg:text-[16px]"
       v-if="isOpen"
       @click="closeDropDown"
     >
+    <!-- sm:w-[150px] -->
       <router-link
         v-for="item in listItems"
         :key="item.name"

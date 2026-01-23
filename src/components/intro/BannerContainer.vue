@@ -26,7 +26,7 @@
 </template>
 
 <script>
-import AppHeader from '../layout/AppHeader.vue'
+  import AppHeader from '../sectionLayout/AppHeader.vue';
 import BannerIntro from './BannerIntro.vue'
 
 export default {

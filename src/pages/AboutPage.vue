@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import SectionOne from '../body/about/SectionOne.vue'
+import SectionOne from '../components/body/about/SectionOne.vue';
 
 export default {
   components: {
