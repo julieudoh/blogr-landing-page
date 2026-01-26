@@ -19,7 +19,7 @@
       />
     </a>
     <div
-      class="w-full rounded-sm bg-gray-200 sm:bg-[hsl(0,100%,100%)] p-4 sm:absolute sm:left-0  cursor-pointer sm:text-[14px] lg:text-[16px]"
+      class="w-full rounded-sm bg-gray-200 sm:bg-[hsl(0,100%,100%)] p-4 sm:absolute sm:left-0 sm:w-30 sm:border-gray-500  cursor-pointer sm:text-[14px] lg:text-[16px]"
       v-if="isOpen"
       @click="closeDropDown"
     >

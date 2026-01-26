@@ -15,7 +15,7 @@
         >Login</base-button
       ></router-link>
       <router-link to="/signup"><base-button
-        class=" px-10 sm:px-6 sm:bg-none sm:bg-[hsl(0,100%,100%)] sm:border-none sm:text-[hsl(356,100%,66%)]"
+        class=" px-10 sm:px-6 sm:bg-none bg-linear-to-l from-[hsl(353,100%,62%)] to-[hsl(13,100%,72%)] border-b-[hsl(353,100%,62%)] sm:bg-[hsl(0,100%,100%)] sm:border-none sm:text-[hsl(356,100%,66%)]"
         >Sign Up</base-button
       ></router-link>
     </div>
