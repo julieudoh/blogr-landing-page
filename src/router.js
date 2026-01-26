@@ -4,6 +4,7 @@ import AboutPage from './pages/AboutPage.vue'
 import FormLayout from './components/layout/FormLayout.vue'
 import LogIn from './pages/forms/LogIn.vue'
 import SignUp from './pages/forms/SignUp.vue'
+import DashBoard from './pages/DashBoard.vue'
 
 
 const router = createRouter({
@@ -41,6 +42,11 @@ const router = createRouter({
                     meta: {hideHeader: true, hideFooter: true}
                 },
         ]
+    },
+    {
+        path: '/dashboard',
+        component: DashBoard,
+        meta: {hideHeader: true, hideFooter: false}
     },
     
     

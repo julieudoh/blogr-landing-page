@@ -10,7 +10,7 @@
 
 <script>
   import BannerContainer from './components/intro/BannerContainer.vue';
-  import AppFooter from './components/sectionLayout/AppFooter.vue';
+  import AppFooter from './components/layout/AppFooter.vue';
 
 export default {
   components: {
