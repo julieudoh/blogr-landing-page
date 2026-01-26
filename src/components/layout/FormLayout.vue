@@ -16,14 +16,14 @@
         class="object-contain h-full hidden sm:block"
       />
     </div>
-    <div class="z-2 absolute w-[90%] top-0 left-4.5 mx-auto sm:w-[85%] lg:w-[80%] sm:right-0">
+    <div class="z-2 absolute w-[80%] top-0 left-8 mx-auto sm:w-[85%] lg:w-[80%] sm:right-0">
       <div class="flex justify-between items-center mt-10 top-0 left-0">
       <div class="h-10 w-20">
         <img :src="headerLogo" alt="Company Logo" class="h-full object-contain" />
       </div>
 
-      <a @click="toggleNav" class="cursor-pointer sm:hidden">
-        <img :src="isOpen ? CloseMenu : OpenMenu" alt="hamburger icon" />
+      <a @click="closePage" class="cursor-pointer">
+        <img :src="CloseMenu" alt="hamburger icon" />
       </a>
     </div>
     </div>
@@ -38,17 +38,15 @@ import close from '../../assets/images/icon-close.svg'
 export default {
   data() {
     return {
-      isOpen: false,
       headerLogo: logo,
       CloseMenu: close,
     }
   },
   methods: {
-    toggleNav() {
-      this.isOpen = !this.isOpen
-    },
-    closeNav() {
-      this.isOpen = false
+    
+    closePage() {
+      // this.$router.go(-1) //{Takes page a step back}
+      this.$router.back()     //{Takes page to the previous page}
     },
   },
 }
