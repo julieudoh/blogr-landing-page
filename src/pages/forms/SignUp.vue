@@ -24,8 +24,8 @@
             </div>
             <div class="w-full mb-3">
                 <label for="re-enterpassword">Re-Enter Password :</label>
-                <input name="re-enterpassword" id="re-enterpassword" v-model="recheckPassword" :class="{invalid : recheckPassword === '' && invalidInput && password !== recheckPassword }" class="w-full py-2 px-4 border border-gray-500 p-2 focus:outline-0"/>
-                <p v-if="password !== recheckPassword" class="text-red-500">Password should be the same</p>
+                <input name="re-enterpassword" id="re-enterpassword" v-model="recheckPassword" :class="{invalid : recheckPassword === '' && invalidInput }" class="w-full py-2 px-4 border border-gray-500 p-2 focus:outline-0"/>
+                <p v-if="recheckPassword !== password" class="text-red-500">Passwords should be the same</p>
             </div>
             <div class="w-full">
                 <input type="checkbox" v-model="confirmterms" class="border border-gray-500 p-2 focus:outline-0"/>
@@ -33,9 +33,11 @@
                 <p v-if="confirmterms === false && invalidInput" class="text-red-500">Please agree to terms!!</p>
             </div>
 
-            <p v-if="error">{{ error }}</p>
 
             <base-button type="submit" class="bg-linear-to-tl from-[hsl(353,100%,62%)] to-[hsl(13,100%,72%)] border-[hsl(353,100%,62%)] w-full p-2 mt-10">Sign Up</base-button>
+
+            <p v-if="error" class="font-bold text-red-500 mt-5">{{ error }}</p>
+
         </form>
     </div>
 </template>
@@ -90,7 +92,7 @@
                 )
                 .catch((error) => {
                     console.log(error)
-                    this.error = error.message;
+                    this.error = 'Could not save data - Try again!!';
                 }
 
                 )
@@ -108,7 +110,7 @@
     }
 </script>
 
-<style scoped>
+<style>
     .invalid{
         border: 1px solid red;
     }

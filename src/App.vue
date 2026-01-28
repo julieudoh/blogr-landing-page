@@ -1,11 +1,11 @@
 <template>
-    <!-- <div> -->
+    <div class="font-[Overpass]">
       <banner-container v-if="!$route.meta.hideHeader"></banner-container>
       <main>
         <router-view></router-view>
       </main>
       <app-footer v-if="!$route.meta.hideHeader"></app-footer>
-    <!-- </div> -->
+    </div>
 </template>
 
 <script>
