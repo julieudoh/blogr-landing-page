@@ -28,7 +28,7 @@
     </div>
     </div>
   </div>
-  <router-view></router-view>
+  <router-view class="font-[]"></router-view>
 </template>
 
 <script>
