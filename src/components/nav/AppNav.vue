@@ -1,25 +1,25 @@
 <template>
-  <div
-    class="absolute w-full top-20 shadow-sm bg-[hsl(0,100%,100%)] shadow-gray-100 rounded-m z-23 rounded-md p-4 sm:bg-transparent sm:w-[87%] lg:w-[80%] sm:shadow-none sm:right-0 sm:flex sm:items-center sm:justify-between sm:p-0 sm:relative sm:top-0 sm:ml-5"
+  <nav
+    class="w-full shadow-sm bg-[hsl(0,100%,100%)] shadow-gray-100 rounded-m rounded-md p-4 sm:p-0 sm:bg-transparent lg:w-large sm:shadow-none sm:flex sm:items-center sm:top-0 sm:ml-7"
   >
-    <ul class="mb-2 sm:flex sm:justify-around sm:mb-0 sm:text-[14px] lg:text-[16px]">
+    <ul class="mb-2 sm:flex sm:justify-around sm:mb-0 sm:text-[14px] lg:text-16 gap-3.5 lg:gap-5">
       <DropDown title="Product" :listItems="product" @emit-data="closeNav" />
       <DropDown title="Company" :listItems="company" @emit-data="closeNav" />
       <DropDown title="Connect" :listItems="connect" @emit-data="closeNav" />
     </ul>
     <div
-      class="flex flex-col sm:flex-row justify-between items-center pt-4 border-t border-gray-300 sm:border-none sm:pt-0 sm:text-[14px] lg:text-[16px]"
+      class="flex flex-col sm:flex-row gap-x-0.5 items-center pt-4 border-t border-gray-300 sm:border-none sm:pt-0 sm:text-[14px] lg:text-16 ml-auto"
     >
       <router-link to="/login"><base-button
-        class="border-0 text-[hsl(208,49%,24%)] mb-2 sm:mb-0 px-10 sm:text-[hsl(0,100%,100%)]"
+        class="border-0 text-[hsl(208,49%,24%)] mb-2 sm:mb-0 w-10 sm:w-22 sm:text-[hsl(0,100%,100%)]"
         >Login</base-button
       ></router-link>
       <router-link to="/signup"><base-button
-        class=" px-10 sm:px-6 sm:bg-none bg-linear-to-l from-[hsl(353,100%,62%)] to-[hsl(13,100%,72%)] border-b-[hsl(353,100%,62%)] sm:bg-[hsl(0,100%,100%)] sm:border-none sm:text-[hsl(356,100%,66%)]"
+        class=" w-10 sm:w-22 text-16 sm:text-[12px] sm:bg-none bg-linear-to-l from-[hsl(353,100%,62%)] to-[hsl(13,100%,72%)] border-b-[hsl(353,100%,62%)] sm:bg-[hsl(0,100%,100%)] sm:border-none sm:text-[hsl(356,100%,66%)]"
         >Sign Up</base-button
       ></router-link>
     </div>
-  </div>
+  </nav>
 </template>
 
 <script>

@@ -1,21 +1,22 @@
 <template>
-  <div class="flex justify-between items-center mt-10 top-0 left-0">
-    <div class="h-10 w-20">
-      <img :src="headerLogo" alt="Company Logo" class="h-full object-contain" />
-    </div>
+  <div class="w-full flex justify-center items-center mt-7">
+      <div class="h-10 w-20 mr-auto">
+        <img :src="headerLogo" alt="Company Logo" class="h-full object-contain" />
+      </div>
 
-    <a @click="toggleNav" class="cursor-pointer sm:hidden">
-      <img :src="isOpen ? CloseMenu : OpenMenu" alt="hamburger icon" />
-    </a>
-    <app-nav v-if="isOpen" @close-nav="closeNav" class="sm:hidden"></app-nav>
     <app-nav class="hidden sm:block"></app-nav>
+    <a @click="toggleNav" class="cursor-pointer sm:hidden ml-auto">
+        <img :src="isOpen ? CloseMenu : OpenMenu" alt="hamburger icon" />
+    </a>
   </div>
+  <app-nav v-if="isOpen" @close-nav="closeNav" class="sm:hidden" >
+  </app-nav>
 </template>
 
 <script>
-import logo from '../../assets/images/logo.svg'
-import hamburger from '../../assets/images/icon-hamburger.svg'
-import close from '../../assets/images/icon-close.svg'
+import logo from '@/assets/images/logo.svg'
+import hamburger from '@/assets/images/icon-hamburger.svg'
+import close from '@/assets/images/icon-close.svg'
 import AppNav from '../nav/AppNav.vue'
 
 export default {

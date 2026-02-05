@@ -1,5 +1,5 @@
 import { createWebHistory, createRouter } from 'vue-router'
-import HomePage from './pages/HomePage.vue'
+import MainPage from './pages/MainPage.vue'
 import AboutPage from './pages/AboutPage.vue'
 import FormLayout from './components/layout/FormLayout.vue'
 import LogIn from './pages/forms/LogIn.vue'
@@ -18,7 +18,7 @@ const router = createRouter({
     },
     {
         path: '/home',
-        component: HomePage,
+        component: MainPage,
         meta: {hideHeader: false, hideFooter: false}
 
     },

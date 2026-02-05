@@ -1,20 +1,18 @@
 <template>
-    <div class="font-[Overpass]">
-      <banner-container v-if="!$route.meta.hideHeader"></banner-container>
-      <main>
-        <router-view></router-view>
-      </main>
-      <app-footer v-if="!$route.meta.hideHeader"></app-footer>
-    </div>
+    <hero-container v-if="!$route.meta.hideHeader"></hero-container>
+    <main>
+      <router-view></router-view>
+    </main>
+    <app-footer v-if="!$route.meta.hideHeader"></app-footer>
 </template>
 
 <script>
-  import BannerContainer from './components/intro/BannerContainer.vue';
-  import AppFooter from './components/layout/AppFooter.vue';
+  import HeroContainer from '@/components/intro/HeroContainer.vue'
+  import AppFooter from '@/components/layout/AppFooter.vue';
 
 export default {
   components: {
-    BannerContainer,
+    HeroContainer,
     AppFooter,
   },
 }
