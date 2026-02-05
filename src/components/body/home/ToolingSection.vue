@@ -1,6 +1,6 @@
 <template>
   <section class="relative w-full overflow-hidden">
-    <div class="w-small my-15 sm:w-large text-center text-20 mx-auto flex flex-col-reverse sm:flex-row-reverse">
+    <div class="w-small my-15 sm:w-large text-center text-20 mx-auto flex flex-col-reverse sm:flex-row-reverse py-10">
       <div class="text-center sm:text-left flex flex-col w-full sm:w-[62%] ml-auto items-center justify-center ">
         <div class="mt-8 sm:text-left sm:mt-0">
           <h3 class="text-[26px] sm:text-[18px] text-[hsl(208,49%,24%)] mb-4 font-semibold">
