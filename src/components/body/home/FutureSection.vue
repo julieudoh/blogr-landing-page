@@ -1,5 +1,5 @@
 <template>
-  <section class="relative w-full overflow-hidden">
+  <section class="relative w-full overflow-hidden ">
     <div class="w-small my-15 sm:w-large text-center text-16 mx-auto">
       <h2 class="text-[26px] sm:text-[30px] text-[hsl(208,49%,24%)] font-semibold">
         Designed for the future

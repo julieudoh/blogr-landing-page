@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full flex justify-center items-center mt-7">
+  <div class="w-full flex justify-center items-center">
       <div class="h-10 w-20 mr-auto">
         <img :src="headerLogo" alt="Company Logo" class="h-full object-contain" />
       </div>

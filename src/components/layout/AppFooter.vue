@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-[hsl(240,10%,16%)] rounded-tr-[90px] font-[Ubuntu] py-17 sm:py-7">
+  <div class="bg-[hsl(240,10%,16%)] rounded-tr-[90px] font-ubuntu py-17 sm:py-7">
     <div
       class="w-small sm:w-large mx-auto text-center text-[hsl(0,100%,100%)] text-16 flex flex-col sm:flex-row justify-center sm:justify-between items-center sm:items-start"
     >

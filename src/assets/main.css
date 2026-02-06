@@ -7,7 +7,8 @@
 
 @theme {
   --font-overpass:'Overpass', sans-serif;
-  --spacing-small: 97%;
+  --font-ubuntu:'Ubuntu', sans-serif;
+  --spacing-small: 90%;
   --spacing-large: 80%;
   --text-16: 16px;
 }
