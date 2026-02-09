@@ -1,12 +1,12 @@
 <template>
   <div class="w-full flex justify-center items-center">
-      <div class="h-10 w-20 mr-auto">
+      <div class="h-10 w-20 lg:h-20 xl:w-30 mr-auto">
         <img :src="headerLogo" alt="Company Logo" class="h-full object-contain" />
       </div>
 
     <app-nav class="hidden sm:block"></app-nav>
     <a @click="toggleNav" class="cursor-pointer sm:hidden ml-auto">
-        <img :src="isOpen ? CloseMenu : OpenMenu" alt="hamburger icon" />
+      <img :src="isOpen ? CloseMenu : OpenMenu" alt="hamburger icon" />
     </a>
   </div>
   <app-nav v-if="isOpen" @close-nav="closeNav" class="sm:hidden" >
