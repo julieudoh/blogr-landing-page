@@ -11,7 +11,5 @@
   --spacing-small: 90%;
   --spacing-large: 80%;
   --text-16: 16px;
-  --breakpoint-xxsm:417px;
-  --breakpoint-xsm:640px;
-  --breakpoint-3xl:1900px;
+  --breakpoint-xsm:417px;
 }
