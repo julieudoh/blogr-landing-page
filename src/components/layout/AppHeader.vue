@@ -1,15 +1,15 @@
 <template>
   <div class="w-full flex justify-center items-center">
-      <div class="h-10 w-20 lg:h-20 xl:w-30 mr-auto">
+      <div class="h-10 w-20 lg:h-20 xl:w-30 2xl:w-40 2xl:h-40 mr-auto flex items-center justify-center">
         <img :src="headerLogo" alt="Company Logo" class="h-full object-contain" />
       </div>
 
-    <app-nav class="hidden sm:block"></app-nav>
-    <a @click="toggleNav" class="cursor-pointer sm:hidden ml-auto">
-      <img :src="isOpen ? CloseMenu : OpenMenu" alt="hamburger icon" />
+    <app-nav class="hidden md:block"></app-nav>
+    <a @click="toggleNav" class="cursor-pointer md:hidden ml-auto">
+      <img :src="isOpen() ? CloseMenu : OpenMenu" alt="hamburger icon" />
     </a>
   </div>
-  <app-nav v-if="isOpen" @close-nav="closeNav" class="sm:hidden" >
+  <app-nav v-if="isOpen()" @close-nav="closeNav" class="md:hidden" >
   </app-nav>
 </template>
 
@@ -23,20 +23,19 @@ export default {
   components: {
     AppNav,
   },
+  inject: ['isOpen','toggleNav'],
   data() {
     return {
-      isOpen: false,
       headerLogo: logo,
       OpenMenu: hamburger,
       CloseMenu: close,
     }
   },
   methods: {
-    toggleNav() {
-      this.isOpen = !this.isOpen
-    },
     closeNav() {
       this.isOpen = false
+      console.log(this.isOpen)
+
     },
   },
 }

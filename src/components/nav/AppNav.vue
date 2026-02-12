@@ -1,21 +1,21 @@
 <template>
   <nav
-    class="w-full shadow-sm bg-[hsl(0,100%,100%)] shadow-gray-100 rounded-m rounded-md p-4 sm:p-0 sm:bg-transparent lg:w-large sm:shadow-none sm:flex sm:items-center sm:top-0 sm:ml-7"
+    class="relative z-10 w-full shadow-sm bg-[hsl(0,100%,100%)] shadow-gray-100 rounded-m rounded-md p-4 md:p-0 md:bg-transparent lg:w-large md:shadow-none md:flex md:items-center md:top-0 md:ml-7"
   >
-    <ul class="mb-2 sm:flex sm:justify-around sm:mb-0 sm:text-[14px] md:text-16 lg:text-[18px] 2xl:text-3xl gap-3.5 2xl:gap-5">
+    <ul class="mb-2 md:flex md:justify-around md:mb-0 md:text-16 lg:text-[20px] xl:text-[22px] 2xl:text-5xl gap-8 2xl:gap-10">
       <DropDown title="Product" :listItems="product" @emit-data="closeNav" />
       <DropDown title="Company" :listItems="company" @emit-data="closeNav" />
       <DropDown title="Connect" :listItems="connect" @emit-data="closeNav" />
     </ul>
     <div
-      class="flex flex-col justify-center sm:flex-row gap-x-0.5  items-center pt-4 border-t border-gray-300 sm:border-none sm:pt-0 sm:text-[14px] ml-auto"
+      class="flex flex-col justify-center md:flex-row gap-x-0.5 lg:gap-x-4  items-center pt-4 border-t border-gray-300 md:border-none md:pt-0 md:text-[14px] ml-auto"
     >
       <router-link to="/login"><base-button
-        class="flex items-center justify-center border-0 text-[hsl(208,49%,24%)] mb-2 sm:mb-0 w-full sm:w-22 md:w-26 lg:w-30 2xl:w-40 py-4 sm:text-[hsl(0,100%,100%)] text-16 sm:text-[12px] md:text-16 lg:text-[18px] 2xl:text-[20px]"
+        class="flex items-center justify-center border-0 text-[hsl(208,49%,24%)] mb-2 md:mb-0 w-full md:w-[13vw] py-4 md:text-[hsl(0,100%,100%)] text-16 md:text-16 lg:text-[20px] xl:text-[22px] 2xl:text-5xl"
         >Login</base-button
       ></router-link>
       <router-link to="/signup"><base-button
-        class=" w-full py-4 flex items-center justify-center  sm:w-22 md:w-26 lg:w-30 2xl:w-40 text-16 sm:text-[12px] md:text-16 lg:text-[18px]  2xl:text-2xl sm:bg-none bg-linear-to-l from-[hsl(353,100%,62%)] to-[hsl(13,100%,72%)] border-b-[hsl(353,100%,62%)] sm:bg-[hsl(0,100%,100%)] sm:border-none sm:text-[hsl(356,100%,66%)]"
+        class=" w-full py-4 xl:py-5 2xl:py-8 flex items-center justify-center md:w-[13vw] text-16 md:text-16 lg:text-[20px] xl:text-[22px] 2xl:text-5xl md:bg-none bg-linear-to-l from-[hsl(353,81%,61%)] to-[hsl(13,100%,72%)] border-b-[hsl(353,100%,62%)] md:bg-[hsl(0,100%,100%)] md:border-none md:text-[hsl(356,100%,66%)]"
         >Sign Up</base-button
       ></router-link>
     </div>

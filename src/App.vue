@@ -1,5 +1,5 @@
 <template>
-    <hero-container v-if="!$route.meta.hideHeader" class="overflow-hidden"></hero-container>
+    <hero-container v-if="!$route.meta.hideHeader"></hero-container>
     <main>
       <router-view></router-view>
     </main>
