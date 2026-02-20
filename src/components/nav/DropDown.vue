@@ -2,7 +2,7 @@
   <div class="w-full py-3 md:py-0 text-center md:relative">
     <a
       @click="$emit('toggle')"
-      class="flex w-full items-center justify-center text-[hsl(208,49%,24%)] active:text-gray-400 md:text-gray-200 cursor-pointer"
+      class="flex w-full items-center justify-center text-[hsl(208,49%,24%)] active:text-gray-400 md:text-gray-50 cursor-pointer"
     >
 
       {{ title }}
