@@ -1,6 +1,6 @@
 <template>
-  <div class="w-full flex justify-center items-center">
-      <div class="h-10 w-20 lg:h-20 xl:w-30 2xl:w-40 2xl:h-40 mr-auto flex items-center justify-center">
+  <div class="w-full h-[20%] flex justify-center items-center">
+      <div class="h-10 w-20 lg:h-20 xl:w-25 xl:h-25 2xl:w-30 2xl:h-30 mr-auto flex items-center justify-center">
         <img :src="headerLogo" alt="Company Logo" class="h-full object-contain" />
       </div>
 

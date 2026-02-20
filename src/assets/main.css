@@ -8,8 +8,10 @@
 @theme {
   --font-overpass:'Overpass', sans-serif;
   --font-ubuntu:'Ubuntu', sans-serif;
-  --spacing-small: 90%;
-  --spacing-large: 80%;
+  --spacing-sm: 90%;
+  --spacing-lg: 80%;
   --text-16: 16px;
-  --breakpoint-xsm:515px;
+  --breakpoint-mxs:374px;
+  --breakpoint-xsm:415px;
+  --breakpoint-xmd:550px;
 }
