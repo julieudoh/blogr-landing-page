@@ -12,8 +12,10 @@
       <img :src="isOpen() ? CloseMenu : OpenMenu" alt="hamburger icon" />
     </a>
   </div>
-  <app-nav v-if="isOpen()" @close-nav="closeNav" class="md:hidden" >
-  </app-nav>
+  <transition name="menu">
+    <app-nav v-if="isOpen()" @close-nav="closeNav" class="md:hidden" >
+    </app-nav>
+  </transition>
 </template>
 
 <script>
