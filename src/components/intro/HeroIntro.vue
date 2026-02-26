@@ -7,8 +7,8 @@
       Grow your audience and build your online brand
     </p>
     <div class="flex justify-center gap-2 sm:gap-4 mt-10 2xl:mt-15 md:mx-auto">
-      <base-button class="2xl:w-64 bg-[hsl(0,100%,100%)] text-[hsl(356,100%,66%)] hover:bg-[hsl(355,100%,74%)] hover:text-[hsl(0,100%,100%)] hover:border-0 ">Start for Free</base-button>
-      <base-button class="2xl:w-64 text-[hsl(0,100%,100%)] border-[hsl(0,100%,100%)] hover:bg-[hsl(0,100%,100%)] hover:text-[hsl(356,100%,66%)]">Learn More</base-button>
+      <base-button class=" bg-[hsl(0,100%,100%)] text-[hsl(356,100%,66%)] hover:bg-[hsl(355,100%,74%)] hover:border-[hsl(355,100%,74%)] hover:text-[hsl(0,100%,100%)] ">Start for Free</base-button>
+      <base-button class=" text-[hsl(0,100%,100%)] border-[hsl(0,100%,100%)] hover:bg-[hsl(0,100%,100%)] hover:text-[hsl(355,100%,74%)]">Learn More</base-button>
     </div>
   </div>
 </template>

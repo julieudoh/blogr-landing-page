@@ -1,6 +1,6 @@
 <template>
   <button
-    class="cursor-pointer border w-30 lg:w-30 xl:w-35 h-10 lg:h-12 xl:h-14 2xl:h-20 text-sm xl:text-lg 2xl:text-2xl rounded-[50px] font-semibold  flex items-center justify-center active:border-0"
+    class="cursor-pointer border min-w-25 max-w-30 2xl:min-w-40 p-2 2xl:p-4  text-[13px] 2xl:text-xl rounded-[50px] font-semibold active:border-0"
   >
     <slot></slot>
   </button>
