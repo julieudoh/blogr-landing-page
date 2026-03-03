@@ -1,5 +1,5 @@
 <template>
-  <div class="w-sm h-[65%] md:h-[75%] mx-auto flex flex-col justify-center md:w-lg  text-center">
+  <div class="w-sm h-[65%] md:h-[75%] mx-auto flex flex-col justify-center md:w-lg text-center">
     <h1 class="font-semibold text-[hsl(0,100%,100%)] text-[30px] xsm:text-[38px] md:text-4xl lg:text-[42px] xl:text-[50px] 2xl:text-8xl">
       A modern publishing platform
     </h1>

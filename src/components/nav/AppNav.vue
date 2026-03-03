@@ -35,7 +35,7 @@ export default {
       product: [
         {
           name: 'Overview',
-          href: '/home',
+          href: '/',
         },
         {
           name: 'Pricing',

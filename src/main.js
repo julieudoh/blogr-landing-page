@@ -15,4 +15,6 @@ app.use(router)
 app.component('base-button', BaseButton)
 app.component('base-card', BaseCard)
 
-app.mount('#app')
+router.isReady().then(() => {
+    app.mount('#app')
+})

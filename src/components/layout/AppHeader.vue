@@ -13,7 +13,7 @@
     </a>
   </div>
   <transition name="menu">
-    <app-nav v-if="isOpen()" @close-nav="closeNav" class="md:hidden" >
+    <app-nav v-if="isOpen()" class="md:hidden" >
     </app-nav>
   </transition>
 </template>
@@ -45,3 +45,4 @@ export default {
   },
 }
 </script>
+

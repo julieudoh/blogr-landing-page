@@ -1,7 +1,8 @@
 <template>
-    <div class="w-[90%] sm:w-[60%] mx-auto bg-[hsl(0,100%,100%)] flex items-">
-        <form class="w-[80%] sm:w-[60%] mx-auto my-20" @submit.prevent="handleLoginSubmit">
-            <h2 class="text-[20px] mb-5  text-[hsl(208,49%,24%)] text-center font-bold">Login to your Account</h2>
+    <div class="fixed top-0 left-0 w-full h-full bg-[rgba(0,0,0,0.9)] flex  z-1000 px-20">
+        <div class="w-screen max-h-[80vh] p-12 md:w-[40%] bg-[rgba(255,255,255,0.9)] mx-auto my-20 overflow-y-auto hide-scrollbar">
+        <form class="text-[hsl(208,49%,24%)] font-semibold" @submit.prevent="handleLoginSubmit">
+            <h2 class="text-[20px] mb-5  text-[hsl(356,100%,66%)] text-center font-bold">Login to your Account</h2>
             <div>
                 <label for="email">Email :</label>
                 <input name="email" id="email" type="email" v-model="useremail" class="w-full py-2 px-4 border border-gray-500 p-2 focus:outline-0" :class="{invalid : useremail === '' && invalidInput}"/>
@@ -20,6 +21,10 @@
 
             <h2 class="pt-5 font-bold ">{{ loginError }}</h2>
         </form>
+        </div>
+        <a @click="closePage" class="absolute md:static cursor-pointer md:my-20 right-5 top-10">
+            <img :src="closeMenu" alt="hamburger icon" />
+        </a>
     </div>
 </template>
 
@@ -36,6 +41,7 @@
                 loginError: ''
             }
         },
+        inject: ['closePage', 'closeMenu'],
         methods: {
             handleLoginSubmit(){
                 if(this.useremail === '' || this.userpassword === ''){
@@ -97,5 +103,17 @@
 <style>
 .invalidUser {
     color: red;
+}
+
+.hide-scrollbar {
+    overflow-y: auto;
+  scrollbar-width: none; 
+  -ms-overflow-style: none;  
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+  width: 0px; 
+  background: transparent;
 }
 </style>

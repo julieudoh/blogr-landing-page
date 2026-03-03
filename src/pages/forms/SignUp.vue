@@ -1,44 +1,49 @@
 <template>
-    <div class="w-[90%] sm:w-[60%] mx-auto bg-[hsl(0,100%,100%)] flex items-center justify-center">
-        <form class="w-[80%] sm:w-[60%] mx-auto my-20" @submit.prevent="handleSignUpSubmit">
-            <h2 class="text-[20px] mb-5 text-[hsl(208,49%,24%)] text-center font-bold">Register</h2>
-            <div class="w-full mb-3">
-                <label for="firstname">First Name :</label>
-                <input name="firstname" id="firstname" type="text" v-model="firstname" :class="{invalid : firstname === '' && invalidInput}" class="w-full py-2 px-4 border border-gray-500 p-2 focus:outline-0"/>
-            </div>
-            <div class="w-full mb-3">
-                <label for="lastname">Last Name :</label>
-                <input name="lastname" id="lastname" type="text" v-model="lastname" :class="{invalid : lastname === '' && invalidInput}" class="w-full py-2 px-4 border border-gray-500 p-2 focus:outline-0"/>
-            </div>
-            <div class="w-full mb-3">
-                <label for="age">Age :</label>
-                <input name="age" id="age" type="number" :class="{invalid : age === null && invalidInput}" v-model="age" class="w-full py-2 px-4 border border-gray-500 p-2 focus:outline-0"/>
-            </div>
-            <div class="w-full mb-3">
-                <label for="email">Email :</label>
-                <input name="email" id="email" type="email" v-model="email" :class="{invalid : email === '' && invalidInput}" class="w-full py-2 px-4 border border-gray-500 p-2 focus:outline-0"/>
-            </div>
-            <div class="w-full mb-3">
-                <label for="password">Password :</label>
-                <input name="password" id="password" v-model="password" :class="{invalid : password === '' && invalidInput}" class="w-full py-2 px-4 border border-gray-500 p-2 focus:outline-0"/>
-            </div>
-            <div class="w-full mb-3">
-                <label for="re-enterpassword">Re-Enter Password :</label>
-                <input name="re-enterpassword" id="re-enterpassword" v-model="recheckPassword" :class="{invalid : recheckPassword === '' && invalidInput }" class="w-full py-2 px-4 border border-gray-500 p-2 focus:outline-0"/>
-                <p v-if="recheckPassword !== password" class="text-red-500">Passwords should be the same</p>
-            </div>
-            <div class="w-full">
-                <input type="checkbox" v-model="confirmterms" class="border border-gray-500 p-2 focus:outline-0"/>
-                <label for="checkbox"> Yes I agree to the terms</label>
-                <p v-if="confirmterms === false && invalidInput" class="text-red-500">Please agree to terms!!</p>
-            </div>
+    <div class="fixed top-0 left-0 w-full max-h-full bg-[rgba(0,0,0,0.9)] flex  z-1000 px-20">
+        <div class="w-screen max-h-[80vh] p-12 md:w-[60%] bg-[rgba(255,255,255,0.9)] mx-auto my-20 overflow-y-auto hide-scrollbar">
+            <form class=" text-[hsl(208,49%,24%)] font-semibold" @submit.prevent="handleSignUpSubmit">
+                <h2 class="text-[20px] mb-5 text-[hsl(356,100%,66%)] text-center font-bold">Register</h2>
+                <div class="w-full mb-3">
+                    <label for="firstname">First Name :</label>
+                    <input name="firstname" id="firstname" type="text" v-model="firstname" :class="{invalid : firstname === '' && invalidInput}" class="w-full py-2 px-4 border border-gray-500 p-2 focus:outline-0"/>
+                </div>
+                <div class="w-full mb-3">
+                    <label for="lastname">Last Name :</label>
+                    <input name="lastname" id="lastname" type="text" v-model="lastname" :class="{invalid : lastname === '' && invalidInput}" class="w-full py-2 px-4 border border-gray-500 p-2 focus:outline-0"/>
+                </div>
+                <div class="w-full mb-3">
+                    <label for="age">Age :</label>
+                    <input name="age" id="age" type="number" :class="{invalid : age === null && invalidInput}" v-model="age" class="w-full py-2 px-4 border border-gray-500 p-2 focus:outline-0"/>
+                </div>
+                <div class="w-full mb-3">
+                    <label for="email">Email :</label>
+                    <input name="email" id="email" type="email" v-model="email" :class="{invalid : email === '' && invalidInput}" class="w-full py-2 px-4 border border-gray-500 p-2 focus:outline-0"/>
+                </div>
+                <div class="w-full mb-3">
+                    <label for="password">Password :</label>
+                    <input name="password" id="password" v-model="password" :class="{invalid : password === '' && invalidInput}" class="w-full py-2 px-4 border border-gray-500 p-2 focus:outline-0"/>
+                </div>
+                <div class="w-full mb-3">
+                    <label for="re-enterpassword">Re-Enter Password :</label>
+                    <input name="re-enterpassword" id="re-enterpassword" v-model="recheckPassword" :class="{invalid : recheckPassword === '' && invalidInput }" class="w-full py-2 px-4 border border-gray-500 p-2 focus:outline-0"/>
+                    <p v-if="recheckPassword !== password" class="text-red-500">Passwords should be the same</p>
+                </div>
+                <div class="w-full">
+                    <input type="checkbox" v-model="confirmterms" class="border border-gray-500 p-2 focus:outline-0"/>
+                    <label for="checkbox"> Yes I agree to the terms</label>
+                    <p v-if="confirmterms === false && invalidInput" class="text-red-500">Please agree to terms!!</p>
+                </div>
 
 
-            <base-button type="submit" class="bg-linear-to-tl from-[hsl(353,100%,62%)] to-[hsl(13,100%,72%)] border-[hsl(353,100%,62%)] w-full p-2 mt-10">Sign Up</base-button>
+                <base-button type="submit" class="bg-linear-to-tl from-[hsl(353,100%,62%)] to-[hsl(13,100%,72%)] border-[hsl(353,100%,62%)] w-full p-2 mt-10">Sign Up</base-button>
 
-            <p v-if="error" class="font-bold text-red-500 mt-5">{{ error }}</p>
+                <p v-if="error" class="font-bold text-red-500 mt-5">{{ error }}</p>
 
-        </form>
+            </form>
+        </div>
+        <a @click="closePage" class="absolute md:static cursor-pointer md:my-20 right-5 top-10">
+            <img :src="closeMenu" alt="hamburger icon" />
+        </a>
     </div>
 </template>
 
@@ -57,7 +62,7 @@
                 error: null
             }
         },
-        
+        inject: ['closePage', 'closeMenu'],
         methods: {
             handleSignUpSubmit(){
                 if(this.firstname == '' || this.lastname === '' || this.age === null || this.email === '' || this.password === '' || this.recheckPassword === '' || this.confirmterms === false || this.password !== this.recheckPassword ){
