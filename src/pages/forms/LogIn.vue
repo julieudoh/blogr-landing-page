@@ -1,6 +1,6 @@
 <template>
     <div class="fixed top-0 left-0 w-screen h-full bg-[rgba(0,0,0,0.9)]  z-1000 py-10 md:px-20">
-        <a @click="closePage" class="absolute right-5 md:right-40 top-5 md:top-10 cursor-pointer">
+        <a @click="closePage" class="absolute right-5 md:right-40 top-10 cursor-pointer">
             <img :src="closeMenu" alt="hamburger icon" />
         </a>
         <div class="w-sm max-h-full p-12 md:w-[60%] bg-[rgba(255,255,255,0.9)] mx-auto my-20 overflow-y-auto hide-scrollbar">
