@@ -1,6 +1,9 @@
 <template>
-    <div class="fixed top-0 left-0 w-full max-h-full bg-[rgba(0,0,0,0.9)] flex  z-1000 px-20">
-        <div class="w-screen max-h-[80vh] p-12 md:w-[60%] bg-[rgba(255,255,255,0.9)] mx-auto my-20 overflow-y-auto hide-scrollbar">
+    <div class="fixed top-0 left-0 w-full max-h-full bg-[rgba(0,0,0,0.9)]  z-1000 md:px-20">
+        <a @click="closePage" class="absolute right-5 md:right-40 top-5 md:top-10 cursor-pointer">
+            <img :src="closeMenu" alt="hamburger icon" />
+        </a>
+        <div class="w-sm h-full max-h-[80vh] p-12 md:w-[60%] bg-[rgba(255,255,255,0.9)] mx-auto my-20 overflow-y-auto hide-scrollbar">
             <form class=" text-[hsl(208,49%,24%)] font-semibold" @submit.prevent="handleSignUpSubmit">
                 <h2 class="text-[20px] mb-5 text-[hsl(356,100%,66%)] text-center font-bold">Register</h2>
                 <div class="w-full mb-3">
@@ -41,9 +44,6 @@
 
             </form>
         </div>
-        <a @click="closePage" class="absolute md:static cursor-pointer md:my-20 right-5 top-10">
-            <img :src="closeMenu" alt="hamburger icon" />
-        </a>
     </div>
 </template>
 
