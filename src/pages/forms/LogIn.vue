@@ -42,7 +42,12 @@
                 loginError: ''
             }
         },
-        inject: ['closePage', 'closeMenu'],
+        inject: ['closePage'],
+        computed: {
+            closeMenu() {
+                return this.$store.state.closeMenu
+            }
+        },
         methods: {
             handleLoginSubmit(){
                 if(this.useremail === '' || this.userpassword === ''){

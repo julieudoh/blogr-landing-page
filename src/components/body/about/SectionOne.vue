@@ -1,5 +1,5 @@
 <template>
-  <section class="text-center text-[16px] w-[90%] mx-auto">
+  <section class="text-center text-16 w-sm mx-auto">
     <h2 class="text-[26px] text-[hsl(208,49%,24%)] mt-18 mb-5 font-semibold">About Us</h2>
     <div class="w-full h-60">
       <img

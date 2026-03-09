@@ -62,7 +62,12 @@
                 error: null
             }
         },
-        inject: ['closePage', 'closeMenu'],
+        inject: ['closePage'],
+        computed: {
+            closeMenu() {
+                return this.$store.state.closeMenu
+            }
+        },
         methods: {
             handleSignUpSubmit(){
                 if(this.firstname == '' || this.lastname === '' || this.age === null || this.email === '' || this.password === '' || this.recheckPassword === '' || this.confirmterms === false || this.password !== this.recheckPassword ){

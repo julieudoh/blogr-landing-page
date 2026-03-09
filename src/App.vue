@@ -19,7 +19,7 @@
 <script>
   import HeroContainer from '@/components/intro/HeroContainer.vue'
   import AppFooter from '@/components/layout/AppFooter.vue';
-  import close from '@/assets/images/icon-close.svg';
+  // import close from '@/assets/images/icon-close.svg';
 
 
 export default {
@@ -27,11 +27,11 @@ export default {
     HeroContainer,
     AppFooter,
   },
-  data() {
-    return {
-      CloseMenu: close,
-    }
-  },
+  // data() {
+  //   return {
+  //     closeMenu: close,
+  //   }
+  // },
   methods: {
     
     closePage() {
@@ -42,7 +42,7 @@ export default {
   provide() {
     return {
       closePage: this.closePage,
-      closeMenu: this.CloseMenu,
+      // closeMenu: this.CloseMenu,
     }
   }
 }

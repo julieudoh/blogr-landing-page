@@ -34,23 +34,23 @@ export default {
     AppHeader,
     HeroIntro,
   },
-  data(){
-    return{
-      isOpen: false,
+  computed:{
+    isOpen(){
+      return this.$store.state.isOpen
     }
   },
-  provide(){
-    return{
-    isOpen : () => this.isOpen,
-    toggleNav : this.toggleNav
-    }
+  // provide(){
+  //   return{
+  //   isOpen : () => this.isOpen,
+  //   toggleNav : this.toggleNav
+  //   }
     
-  },
-  methods: {
-    toggleNav() {
-      this.isOpen = !this.isOpen
-    },
-  }
+  // },
+  // methods: {
+  //   toggleNav() {
+  //     this.$store.commit('toogleNav')
+  //   },
+  // }
 
 }
 </script>

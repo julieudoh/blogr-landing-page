@@ -9,11 +9,11 @@
 
     <app-nav class="hidden md:block"></app-nav>
     <a @click="toggleNav" class="cursor-pointer md:hidden ml-auto">
-      <img :src="isOpen() ? CloseMenu : OpenMenu" alt="hamburger icon" />
+      <img :src="isOpen ? CloseMenu : OpenMenu" alt="hamburger icon" />
     </a>
   </div>
   <transition name="menu">
-    <app-nav v-if="isOpen()" class="md:hidden" >
+    <app-nav v-if="isOpen" class="md:hidden" >
     </app-nav>
   </transition>
 </template>
@@ -28,7 +28,12 @@ export default {
   components: {
     AppNav,
   },
-  inject: ['isOpen','toggleNav'],
+  // inject: ['isOpen','toggleNav'],
+  computed:{
+    isOpen(){
+      return  this.$store.state.isOpen
+    }
+  },
   data() {
     return {
       headerLogo: logo,
@@ -37,10 +42,8 @@ export default {
     }
   },
   methods: {
-    closeNav() {
-      this.isOpen = false
-      console.log(this.isOpen)
-
+    toggleNav() {
+      this.$store.commit('toggleNav')
     },
   },
 }
