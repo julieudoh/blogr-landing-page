@@ -89,9 +89,6 @@ export default {
     }
   },
   methods: {
-    // closeNav(data) {
-    //   this.$emit('close-nav', data)
-    // },
     handleToggle(id){
       this.activeDropdown = (this.activeDropdown === id) ? null : id;
     }

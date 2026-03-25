@@ -1,7 +1,7 @@
 <template>
     <nav class="  relative sm:static sm:w-[25%]">
     <a @click="toggleNav" class="absolute top-0 cursor-pointer p-2 w-8 h-8 bg-linear-to-l from-[hsl(353,100%,62%)] to-[hsl(13,100%,72%)] sm:hidden flex justify-center items-center">
-        <img :src="isOpen ? CloseMenu : OpenMenu" alt="hamburger icon" class="object-cover "/>
+        <img :src="isOpen ? CloseMenu : OpenMenu" alt="hamburger icon" class="object-cover"/>
     </a>
     <div class="w-full hidden sm:block p-5 bg-gray-100 rounded-lg h-70 ">
         <div class="h-full flex flex-col justify-between">
@@ -26,9 +26,9 @@
                 <a href=""><li>Wish List</li></a> 
             </ul>        
         <div
-            class="mt-6 pt-8 border-t border-gray-500 sm:text-[14px] lg:text-[16px] font-bold"
+            class="mt-6 pt-8 border-t border-gray-500 sm:text-[14px] lg:text-16 font-bold"
         >
-            <router-link to="/login" class="text-[hsl(356,100%,66%)]">Sign Out</router-link>
+            <router-link to="/" class="text-[hsl(356,100%,66%)]">Sign Out</router-link>
         </div>
     </div>
     </nav>
