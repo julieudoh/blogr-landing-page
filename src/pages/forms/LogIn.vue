@@ -14,7 +14,7 @@
                 </div>
                 <div>
                     <label for="password">Password :</label>
-                    <input name="password" id="password" type="password" v-model="userpassword" class="w-full py-2 px-4 border border-gray-500 p-2 focus:outline-0" :class="{invalid : userpassword === '' && invalidInput}"/>
+                    <password-toggle id="password" v-model="userpassword" :class="{invalid : userpassword === '' && invalidInput}"></password-toggle>
 
                     <p v-if="userpassword === '' && invalidInput" class=" mt-2 text-red-300">Input Password</p>
                 </div>
@@ -30,8 +30,11 @@
 </template>
 
 <script>
-
+import PasswordToggle from './password/PasswordToggle.vue';
     export default{
+        components: {
+            PasswordToggle
+        },
         data(){
             return{
                 useremail: '',
@@ -57,7 +60,7 @@
 
                 this.error = null
                 
-                fetch('https://rsvp-form-34302-default-rtdb.firebaseio.com/blogrusersdata.json')
+                fetch('https://rsvp-intern-default-rtdb.firebaseio.com/blogrusersdata.json')
                 .then((Response) => {
                     if (Response.ok) {
                          return Response.json()

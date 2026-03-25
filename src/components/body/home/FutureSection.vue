@@ -7,7 +7,7 @@
         </h2>
         
         <div class="flex items-center h-full justify-center flex-col-reverse md:flex-row-reverse md:w-full py-15 2xl:py-35">
-          <div class="w-full md:w-[53%] xl:w-[40%] md:flex md:flex-col items-center justify-center mr-auto">
+          <div class="w-full md:w-[53%] 2xl:w-[50%] md:flex md:flex-col items-center justify-center mr-auto">
             <div class="mt-8 xl:mt-12 md:text-left">
               <h3 class="text-2xl md:text-lg lg:text-xl xl:text-2xl 2xl:text-[40px] text-[hsl(208,49%,24%)] mb-4 font-semibold">
                 Introducing an extensible editor

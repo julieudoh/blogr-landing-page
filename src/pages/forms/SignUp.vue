@@ -24,11 +24,13 @@
                 </div>
                 <div class="w-full mb-3">
                     <label for="password">Password :</label>
-                    <input name="password" id="password" v-model="password" :class="{invalid : password === '' && invalidInput}" class="w-full py-2 px-4 border border-gray-500 p-2 focus:outline-0"/>
+                     <password-toggle v-model="password" :class="{invalid : password === '' && invalidInput}"></password-toggle>
+                    <!-- <input name="password" id="password" v-model="password" :class="{invalid : password === '' && invalidInput}" class="w-full py-2 px-4 border border-gray-500 p-2 focus:outline-0"/> -->
                 </div>
                 <div class="w-full mb-3">
-                    <label for="re-enterpassword">Re-Enter Password :</label>
-                    <input name="re-enterpassword" id="re-enterpassword" v-model="recheckPassword" :class="{invalid : recheckPassword === '' && invalidInput }" class="w-full py-2 px-4 border border-gray-500 p-2 focus:outline-0"/>
+                    <label for="password">Re-Enter Password :</label>
+                     <password-toggle v-model="recheckPassword" :class="{invalid : recheckPassword === '' && invalidInput }"></password-toggle>
+                    <!-- <input name="re-enterpassword" id="re-enterpassword" v-model="recheckPassword" :class="{invalid : recheckPassword === '' && invalidInput }" class="w-full py-2 px-4 border border-gray-500 p-2 focus:outline-0"/> -->
                     <p v-if="recheckPassword !== password" class="text-red-500">Passwords should be the same</p>
                 </div>
                 <div class="w-full">
@@ -48,7 +50,11 @@
 </template>
 
 <script>
+import PasswordToggle from './password/PasswordToggle.vue';
     export default{
+        components: {
+                    PasswordToggle
+        },
         data(){
             return{
                 firstname: '',
@@ -77,7 +83,7 @@
                 this.invalidInput = false
                 this.error = null
 
-                fetch('https://rsvp-form-34302-default-rtdb.firebaseio.com/blogrusersdata.json', {
+                fetch('https://rsvp-intern-default-rtdb.firebaseio.com/blogrusersdata.json', {
                     method: 'POST',
                     header: {
                         'Content-Type' : 'application/json'
