@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full h-screen p-5 sm:p-12 flex">
+    <div class="w-full h-screen p-5 sm:p-12 flex" v-if="userIsAuthenticated">
         <user-nav></user-nav>
         <user-profile 
         v-for="data in user" 
@@ -11,7 +11,9 @@
 <script>
 import UserNav from '../components/layout/dashboard-layout/UserNav.vue';
 import UserProfile from '../components/layout/dashboard-layout/UserProfile.vue'
-    export default {
+ 
+import { mapGetters } from 'vuex'
+export default {
         components: {
             UserNav,
             UserProfile,
@@ -26,6 +28,9 @@ import UserProfile from '../components/layout/dashboard-layout/UserProfile.vue'
             if(user) {
                 this.user.push(user)
             }
-        }
+        },
+        computed: {
+            ...mapGetters(['userIsAuthenticated']),
+        },
     }
 </script>

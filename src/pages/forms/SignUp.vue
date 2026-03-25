@@ -77,7 +77,7 @@
                 this.invalidInput = false
                 this.error = null
 
-                fetch('https://rsvp-form-34302-default-rtdb.firebaseio.com/blogrusersdata.json', {
+                fetch('https://intern-project-ccab7-default-rtdb.firebaseio.com/blogrusersdata.json', {
                     method: 'POST',
                     header: {
                         'Content-Type' : 'application/json'
@@ -113,8 +113,6 @@
                 this.password === '' 
                 this.recheckPassword === '' 
                 this.confirmterms === false
-
-                
             }
         }
     }
