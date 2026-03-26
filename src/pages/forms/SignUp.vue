@@ -83,7 +83,7 @@ import PasswordToggle from './password/PasswordToggle.vue';
                 this.invalidInput = false
                 this.error = null
 
-                fetch('https://rsvp-intern-default-rtdb.firebaseio.com/blogrusersdata.json', {
+                fetch('https://blogr-form-default-rtdb.firebaseio.com/blogrusersdata.json', {
                     method: 'POST',
                     header: {
                         'Content-Type' : 'application/json'

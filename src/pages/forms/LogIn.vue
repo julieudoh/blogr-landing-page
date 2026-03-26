@@ -64,7 +64,7 @@ import PasswordToggle from './password/PasswordToggle.vue';
                     return
                 }
                 
-                fetch('https://rsvp-intern-default-rtdb.firebaseio.com/blogrusersdata.json')
+                fetch('https://blogr-form-default-rtdb.firebaseio.com/blogrusersdata.json')
                 .then((Response) => {
                     if (Response.ok) {
                          return Response.json()
