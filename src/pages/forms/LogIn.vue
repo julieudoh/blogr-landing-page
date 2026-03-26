@@ -22,7 +22,9 @@
 
                 <p :class="{invalidUser: loginError !== ''}">Forgot your password?</p>
 
-                <h2 class="pt-5 font-bold ">{{ loginError }}</h2>
+                <h2 v-if="loginError" class="pt-5 font-bold text-red-500 ">{{ loginError }}</h2>
+                <h2 v-if="error" class="pt-5 font-bold text-red-700 ">{{ error }}</h2>
+
             </form>
         </div>
         
@@ -53,18 +55,21 @@ import PasswordToggle from './password/PasswordToggle.vue';
         },
         methods: {
             handleLoginSubmit(){
+                 this.loginError = '';
+                 this.error = null
+
+
                 if(this.useremail === '' || this.userpassword === ''){
                     this.invalidInput = true;
                     return
                 }
-
-                this.error = null
                 
-                fetch('https://rsvp-form-34302-default-rtdb.firebaseio.com/blogrusersdata.json')
+                fetch('https://rsvp-intern-default-rtdb.firebaseio.com/blogrusersdata.json')
                 .then((Response) => {
                     if (Response.ok) {
                          return Response.json()
                     }
+                    throw new Error('Network response was not ok');
                 }).then((data) => {
                     const results = []
                     let userData
