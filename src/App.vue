@@ -36,7 +36,8 @@ export default {
     
     closePage() {
       // this.$router.go(-1) //{Takes page a step back}
-      this.$router.back()     //{Takes page to the previous page}
+      // this.$router.back()     //{Takes page to the previous page}
+      this.$router.push('/')
     },
   },
   provide() {

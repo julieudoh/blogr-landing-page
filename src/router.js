@@ -46,7 +46,7 @@ const router = createRouter({
                         modal:SignUp,
                     },
                 },
-                    // meta: {hideHeader: true, hideFooter: true}
+        // meta: {hideHeader: true, hideFooter: true}
 
         // ]
     // },

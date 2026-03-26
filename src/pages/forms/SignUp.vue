@@ -119,8 +119,6 @@ import PasswordToggle from './password/PasswordToggle.vue';
                 this.password === '' 
                 this.recheckPassword === '' 
                 this.confirmterms === false
-
-                
             }
         }
     }

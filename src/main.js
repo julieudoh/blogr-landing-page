@@ -8,20 +8,36 @@ import close from '@/assets/images/icon-close.svg';
 
 
 import App from './App.vue'
+
 import { createStore } from 'vuex'
 
 const store = createStore({
     state () {
         return {
             isOpen: false,
-            closeMenu: close
+            closeMenu: close,
+            isLoggedIn: false
         }
     },
     mutations: {
         toggleNav(state) {
             state.isOpen = !state.isOpen
         },
+        setAuth(state, payload){
+            state.isLoggedIn = payload.isAuth
+        }
+    },
+    actions: {
+        setAuth(context){
+            context.commit('setAuth', {isAuth: true})
+        }
+    },
+    getters: {
+        userIsAuthenticated(state){
+            return state.isLoggedIn
+        }
     }
+
 })
 
 const app = createApp(App)

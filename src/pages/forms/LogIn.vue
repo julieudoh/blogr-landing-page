@@ -60,7 +60,7 @@ import PasswordToggle from './password/PasswordToggle.vue';
 
                 this.error = null
                 
-                fetch('https://rsvp-intern-default-rtdb.firebaseio.com/blogrusersdata.json')
+                fetch('https://rsvp-form-34302-default-rtdb.firebaseio.com/blogrusersdata.json')
                 .then((Response) => {
                     if (Response.ok) {
                          return Response.json()
@@ -81,12 +81,11 @@ import PasswordToggle from './password/PasswordToggle.vue';
                         return this.useremail === result.email && this.userpassword === result.password})
 
                         if(userData) {
-                            // this.currentUser = userData
-                            console.log('Current User ' , this.userData)
                             localStorage.setItem('user', JSON.stringify(userData));
                             this.$router.push(
                                 { path: '/dashboard', query: { firstName: userData.firstname } }
                             )
+                            this.$store.dispatch('setAuth')
                         } else {
                             this.loginError = 'Invalid email or password - Recover password'
                         }
@@ -95,12 +94,6 @@ import PasswordToggle from './password/PasswordToggle.vue';
                     console.log(error)
                     this.error = 'Failed to fetch data - Try again later!!'
                 })
-            
-
-                   
-                
-                
-
                 
                 
             },
